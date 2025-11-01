@@ -38,6 +38,14 @@ a:focus {
     outline: 3px solid #4d5ae5;
 }
 
+a:active {
+    outline: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
@@ -235,11 +243,27 @@ label,
 /* #region HEADER Nav Menu & Address */
 
 .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #fff;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
     /*z-index: 900;*/
+}
+
+body {
+    padding-top: 56px;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        padding-top: 72px;
+    }
 }
 
 .header-container {
@@ -1249,6 +1273,8 @@ and (max-width: 1157px) {
     fill: tomato;
 }
 
+
+/* ! CheckBox */
 .form-checkbox-box {
     margin-bottom: 24px;
 }
@@ -1256,7 +1282,6 @@ and (max-width: 1157px) {
 .form-checkbox-label {
     display: flex;
     align-items: center;
-    padding: 0;
 }
 
 .form-checkbox-new {
@@ -1287,6 +1312,10 @@ and (max-width: 1157px) {
 .chkbx-label-text {
     display: inline-flex;
     flex-direction: column;
+}
+
+.chkbx-label-text .text-link {
+    line-height: 1.17;
 }
 
 @media only screen and (min-width: 768px) {
